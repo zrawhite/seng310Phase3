@@ -1,0 +1,25 @@
+<html>
+	<head style="height:100%; margin: 0" >
+	
+	<!--This is the javascript which does the 'heavy lifting' for the webpage-->
+	<script src ="calorieCal.js"></script> 
+
+	<!--CSS -->
+	<link rel="stylesheet" type="text/css" href = "styleSheet.css">
+
+	<!--CDN for jQuery-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	</head>
+		<body>
+			<form name = "calorieForm">
+				<input type="radio" name="gender" id="male"> Male<br>
+				<input type="radio" name="gender" id="female"> Female<br>
+				Age: <input type="number" id="age"><br>
+				Weight: <input type="number" id="weight"><br>
+				Height <br> 
+				Feet <input type="number" id="heightF"> Inches <input type="number" id="heightI"><br>
+				<input type="button" value="Submit" onclick="calcCalories();">
+			</form>
+		<div id="output"></div>	
+		</body>
+</html>	
