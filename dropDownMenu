@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+
+div#topbar > #sections_btn_holder{
+	float:left;
+	width:144px;
+	height:46px;
+	padding-top:40px;
+	padding-left:400px;
+}
+
+div#topbar > #sections_panel{
+	position:absolute;
+	height:0px;
+	width:180px;
+	background:#ADD8E6;
+	top:70px;
+	left:400px;
+	border-radius:0px 8px 8px 8px;
+	overflow:hidden;
+	z-index:10000;
+	transition: height 0.3s linear 0s;
+}
+
+div#topbar > #sections_panel > #User_Profile{
+	background:#DCDCDC;
+	padding:5px;
+	height:20px;
+	margin:5px;
+	color:#000000;
+}
+
+div#topbar > #sections_panel > #Recipes{
+	background:#DCDCDC;
+	padding:5px;
+	height:20px;
+	margin:5px;
+	color:#000000;
+}
+
+div#topbar > #sections_panel > #Saved_Recipes{
+	background:#DCDCDC;
+	padding:5px;
+	height:20px;
+	margin:5px;
+	color:#000000;
+}
+
+div#topbar > #sections_panel > #Seven_Day_Planner{
+	background:#DCDCDC;
+	padding:5px;
+	height:20px;
+	margin:5px;
+	color:#000000;
+}
+
+div#topbar > #sections_panel > #Health_Tracker{
+	background:#DCDCDC;
+	padding:5px;
+	height:20px;
+	margin:5px;
+	color:#000000;
+}
+
+div#topbar > #sections_panel > #Help_and_Support{
+	background:#DCDCDC;
+	padding:5px;
+	height:20px;
+	margin:5px;
+	color:#000000;
+}
+
+div#topbar > #sections_panel > #Log_Out{
+	background:#DCDCDC;
+	padding:5px;
+	height:20px;
+	margin:5px;
+	color:#000000;
+}
+</style>
+
+<script>
+
+function toggleNavPanel(x){
+	var panel = document.getElementById(x), navarrow = document.getElementById("navarrow"), maxH="250px";
+	if(panel.style.height == maxH){
+		panel.style.height = "0px";
+		navarrow.innerHTML = "&#9662;";
+	} else {
+		panel.style.height = maxH;
+		navarrow.innerHTML = "&#9652;";
+	}
+
+}
+
+</script>
+</head>
+
+<body>
+
+<div id="topbar">
+	
+	<div id="sections_btn_holder">
+		<button onclick="toggleNavPanel('sections_panel')">Menu <span id="navarrow">&#9662;</span></button>
+	</div>
+
+
+	<div id="sections_panel">
+		<div id="User_Profile"> User Profile </div>
+		<div id="Recipes"> Recipes </div>
+		<div id="Saved_Recipes"> Saved Recipes </div>
+		<div id="Seven_Day_Planner"> 7 Day Planner </div>
+		<div id="Health_Tracker"> Health Tracker </div>
+		<div id="Help_and_Support"> Help and Support </div>
+		<div id="Log_Out"> Log Out </div>
+
+	</div>
+</div>
+</body>
+</html>
